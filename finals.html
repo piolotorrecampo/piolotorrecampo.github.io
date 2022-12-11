@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Midterm Laboratories</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">JP</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="prelim.html">PRELIM</a></li>
+          <li><a href="midterm.html">MIDTERM</a></li>
+          <li><a href="finals.html" class="active">FINALS</a></li>
+          <li><a href="learnings.html">LEARNINGS & REFLECTION</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="wrapper style1">
+      <!-- MAIN -->
+      <section id="main" class="wrapper style1-alt">
+        <div class="inner">
+          <h1 class="major">FINALS LABORATORIES</h1>
+          <ul>
+            <li><h3><a href="#1011">1011 Containerization</a><h3></li>
+            <li><h3><a href="#1100">1100 Build a Sample Web App in a Docker Container</a><h3></li>
+            <li><h3><a href="#1101">1101 OpenStack Prerequisite Installation</a><h3></li>
+            <li><h3><a href="#1110">1110 OpenStack Installation (Keystone, Glance, Nova)</a><h3></li>
+            <li><h3><a href="#1111">1111 OpenStack Installation (Neutron, Horizon, Cinder)</a><h3></li>
+            <li><h3><a href="#">FINALS SKILLS EXAMINATION</a><h3></li>
+          </ul>
+        </div>
+      </section>
+      <section id="1011" class="wrapper">
+        <div class="inner">
+          <h1 class="major">1011 Containerization</h1>
+          <span class="image fit"><img src="https://www.howtogeek.com/wp-content/uploads/csit/2021/04/075c8694.jpeg?width=1198&trim=1,1&bg-color=000&pad=1,1" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p> The activity achieved its objective to practice the student in creating a Dockerfile and using the ansible to build an image with it and deploy it as a container which enables the continuous delivery process for an enterprise. This activity gives me a clear understanding of how Docker works in a live environment. Docker reduces the resources in a computing system that enables it to replace a full working operating system to minimal installation by using docker containerization. Containerization works by isolating a group of applications in the host operating system. It is not a fully operational operating system but it has the dependencies and is capable of launching an application.</p>
+          <p> In performing this activity, I have decided to make all of the steps regarding installation and enabling docker, building a Dockerfile, and deploying the container in one ansible playbook. In installing and enabling the services of docker, I relied on the steps in the official page of docker and convert into ansible syntax. In building the Dockerfile and deploying it as a container, I utilized the given code in the ansible official documentation for docker support. Overall, this activity gives me confidence in writing Dockerfile and as well as building an image and deploying a container.</p>
+        </div>
+      </section>
+      <section id="1100" class="wrapper style1-alt">
+        <div class="inner">
+          <h1 class="major">1100 Build a Sample Web App in a Docker Container </h1>
+          <span class="image fit"><img src="https://docs.nvidia.com/networking/download/attachments/15049785/2.png?version=2&modificationDate=1561972797970&api=v2" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p>This activity gives me confidence in scripting a Dockerfile and launching it to the server. This method of creating a bash script is used in launching a fully functional simple web application on the server. The bash script consists of the commands in a sequence that executes in the system and also creates and builds a docker file. Also this activity introduces me to creating simple web applications with the use of a web framework namely flask. This web framework is installed on the top of a python container that enables it to run a web page. At the end of this activity, I used a different method in verifying whether the application is running in the web browser.</p>
+        </div>
+      </section>
+      <section id="1101" class="wrapper">
+        <div class="inner">
+          <h1 class="major">1101 OpenStack Prerequisite Installation</h1>
+          <span class="image fit"><img src="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/images/gallery/thumbnails/tn-vmware-openstack.jpg" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p>This activity achieves its objective to introduce and create a workflow to install OpenStack using Ansible as my Infrastructure as Code (IaC). In performing this activity, I relied on the documentation given by OpenStack in installing its prerequisite tools such as Networking Time Protocol (NTP), OpenStack Packages, SQL database, Message queue, memcached and etcd. These prerequisites of OpenStack are installed in the controller node using ansible.</p
+          <p>NTP</p>
+          <p>The NTP is used to properly synchronize services among nodes. In this activity I used Chrony as an implementation of NTP.</p>
+          <p>OpenStack Packages</p>
+          <p>OpenStack packages as part of the distribution or using other methods because of differing release schedules. The installation of these packages are done in all nodes (controller, computer, and block storage).</p>
+          <p>SQL Database</p>
+          <p>This prerequisite package is used to store information and typically runs on the controller node. Since I used OpenSUSE, the documentation provides an installation for mariadb as my sql database.</p>
+          <p>Message Queue</p>
+          <p>The message queue is used to coordinate operations and status information among services and typically runs on the controller node. Since I used OpenSUSE, the documentation provides an installation for RabbitMQ as a message queue. </p>
+          <p>Memcached</p>
+          <p>The Identity service authentication mechanism for services uses Memcached to cache tokens. The memcached service typically runs on the controller node. For production deployments, we recommend enabling a combination of firewalling, authentication, and encryption to secure it.</p>
+          <p>Etcd</p>
+          <p>Etcd is a distributed reliable key-value store for distributed key locking, storing configuration, keeping track of service live-ness and other scenarios.</p>
+        </div>
+      </section>
+      <section id="1110" class="wrapper style1-alt">
+        <div class="inner">
+          <h1 class="major">1110 OpenStack Installation (Keystone, Glance, Nova)</h1>
+          <span class="image fit"><img src="http://sysblog.informatique.univ-paris-diderot.fr/wp-content/uploads/2019/03/OpenStack_Project_Keystone_vertical.jpg" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p>This activity achieves its objective to introduce the tool under openstack to implement the Iac or Infrastructure as Code. Infrastructure as Code (IaC) is a method of defining, managing, and deploying infrastructure in a repeatable and automated way. This approach allows for greater consistency, reliability, and scalability in managing complex infrastructure. Glance, Keystone, and Nova are all tools that can be used in an IaC setup to manage different aspects of a cloud computing environment. By using these tools, organizations can ensure that their infrastructure is managed in a consistent and efficient manner.</p>
+        </div>
+      </section>
+      <section id="1111" class="wrapper">
+        <div class="inner">
+          <h1 class="major">1111 OpenStack Installation (Neutron, Horizon, Cinder)</h1>
+          <span class="image fit"><img src="https://discourse.charmhub.io/uploads/default/optimized/2X/9/96e7226488f145a2c068fe1e8784914981b262af_2_690x435.png" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p>In conclusion, using Ansible as the Infrastructure as Code (IaC) tool in an OpenStack environment can provide several benefits. Ansible's simple, declarative language and agentless architecture make it easy to manage and deploy complex infrastructure. It also integrates well with other OpenStack components, allowing for a seamless and automated end-to-end workflow. Neutron, Horizon, and Cinder are all important components of the OpenStack cloud computing platform. Neutron provides network connectivity as a service for other OpenStack services, allowing users to create and manage networks, subnets, and routers. Horizon is the web-based dashboard for OpenStack, providing a graphical user interface for users to manage and interact with the various OpenStack services. Cinder provides block storage services, allowing users to create, attach, and manage persistent storage volumes and snapshots. Together, these components form a powerful and flexible platform for managing cloud infrastructure in a consistent and automated manner.</p>
+        </div>
+      </section>  
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>Juan Piolo Torrecampo</li>
+          <li>Project in Managing Enterprise Servers</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

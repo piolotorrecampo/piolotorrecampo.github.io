@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <title>Midterm Laboratories</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">JP</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="prelim.html">PRELIM</a></li>
+          <li><a href="midterm.html" class="active">MIDTERM</a></li> 
+          <li><a href="finals.html">FINALS</a></li> 
+          <li><a href="learnings.html">LEARNINGS & REFLECTION</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="wrapper style1">
+      <!-- MAIN -->
+      <section id="main" class="wrapper style1-alt">
+        <div class="inner">
+          <h1 class="major">MIDTERM LABORATORIES</h1>
+          <ul>
+            <li><h3><a href="#0110">0110 Targeting Specific Nodes and Managing Services</a><h3></li>
+            <li><h3><a href="#0111">0111 Managing Files and Creating Roles in Ansible</a><h3></li>
+            <li><h3><a href="#1000">1000 Install, Configure, and Manage Availability Monitoring tools</a><h3></li>
+            <li><h3><a href="#1001">1001 Install, Configure, and Manage Performance Monitoring tools</a><h3></li>
+            <li><h3><a href="#1010">1010  Install, Configure, and Manage Log Monitoring tools</a><h3></li>
+            <li><h3><a href="https://github.com/piolotorrecampo/CPE_MIDEXAM_TORRECAMPO.git">MIDTERM SKILLS EXAMINATION</a><h3></li>
+          </ul>
+        </div>
+      </section>
+      <section id="0110" class="wrapper style1">
+        <div class="inner">
+          <h1 class="major">0110 Targeting Specific Nodes and Managing Services</h1>
+          <span class="image fit"><img src="https://www.opcito.com/hubfs/Things-you-can-do-with-Ansible-AWX-custom-inventory-image-1.png" alt="" /></span>
+          <h3>Reflections</h3>
+          <p>What is the importance of putting our remote servers into groups?</p>
+          <p>It organizes the tasks that are issued to the different servers. In this method we can manage the task that can be implemented in each of the servers. As I observed in this activity that in the part of the inventory file there are three groups specifying different functions of a server. There is a server for a website, database and for file transfer. Inside of the site.yml file are where the groups are called in the hosts variable. This is where the tasks are issued and execute only the specified server/s in the group. This means that putting the servers into groups means we are grouping depending on their functionality and similarities to its neighboring servers.</p>
+          <p>What is the importance of tags in playbooks?</p>
+          <p>The importance of tags in a playbook is that it can specify and execute a specific task in a server whether it is in another group or not as long as the tags are specified to the target task. In task 2, we put a bunch of tags per task. These tags are similar to other tags in different tasks. When we run the ”ansible-playbook -tags “tag_name” site.yml” then it will run all of the tasks that have tags that are specified in the command. Ansible supports running multiple tags by separating it my comma and should be inside of a quotation marks.</p>
+          <p><Why do think some services need to be managed automatically in playbooks? /p>
+          <p>I do think that some services need to be managed automatically. For the reason that some services are stopped when there are updates or upgrades performed in the computer or  the computer did not have that package and therefore it needed to start. This will also provide an assurance that the service is successfully started. As we can see at the last part of this activity, we tried to stop the service httpd and run it using the ansible playbook with a configured task to start the httpd server of the CentOS. We also specify the “enable: true” in the task to automatically run the service when the playbook is executed.</p>
+        </div>
+      </section>
+      <section id="0111" class="wrapper style1-alt">
+        <div class="inner">
+          <h1 class="major">0111 Managing Files and Creating Roles in Ansible</h1>
+          <span class="image fit"><img src="https://spacelift.io/_next/image?url=https%3A%2F%2Fspaceliftio.wpcomstaging.com%2Fwp-content%2Fuploads%2F2022%2F06%2F76.ansible-roles.png&w=1080&q=100" alt="" /></span>
+          <h3>Reflections</h3>
+          <p>What is the importance of creating roles?</p>
+          <p>The importance of creating a role is that we are dividing the tasks in organized form. In this organization technique, a system administrator can easily manage the tasks per role.</p>
+          <p>What is the importance of managing files? </p>
+          <p>In managing files, we can easily determine which specific computer or the role of computer that we want to work on.</p>
+        </div>
+      </section>
+      <section id="1000" class="wrapper">
+        <div class="inner">
+          <h1 class="major">1000 Install, Configure, and Manage Availability Monitoring tools</h1>
+          <span class="image fit"><img src="https://nagios.force.com/support/servlet/rtaImage?eid=ka01K000000tAkS&feoid=00N1K00000fUqE8&refid=0EM1K000005lX9e" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p>In summing up, this activity achieved its objective to create and design an ansible playbook that can install, configure and manage monitoring too, specifically the Nagios. In researching Nagios, I found that this is an open source application that monitors a computer system, networks and an entire IT infrastructure. The Nagios application has a bunch of dependencies to install depending on the system but has the same installation process. As I observe, the installation process of Nagios between CentOS and Ubuntu starts by installing the required dependencies in the software. The second step in the installation process is to download the source file for Nagios application and its plugin then extract them in a directory. After extracting, copile them by a bunch of make commands and a script provided in the file. The last process is to restart all of the service to apply the changes in the system. As a result I can now access the Nagios website through firefox by typing ip address and following the nagios (e.g, 192.168.122.90/nagios).</p>
+        </div>
+      </section>
+      <section id="1001" class="wrapper style1-alt">
+        <div class="inner">
+          <h1 class="major">1001 Install, Configure, and Manage Performance Monitoring tools</h1>
+          <span class="image fit"><img src="https://assets-global.website-files.com/5fbfbba70f3f813561ef7b9f/6230f00ed9ba107a5060af70_prometheus-p-1080.png" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p>This activity achieves its goal to introduce other enterprise performance tools that apply the use of Ansible as a medium in automating the processes in a server. In the procedure part of the activity introduces the monitoring tool called Prometheus. The first step in completing this activity is to research for a possible installation guide for a Ubuntu and CentOS server. Then convert this set of instructions into a ansible playbook that installs and runs services in both servers. Upon observation throughout this activity, I realized that the method of installing and starting the services of Prometheus in both servers are the same. Overall, this activity gives me confidence in creating ansible playbooks and to implement roles to it. </p>
+        </div>
+      </section>
+      <section id="1010" class="wrapper">
+        <div class="inner">
+          <h1 class="major">1010  Install, Configure, and Manage Log Monitoring tools</h1>
+          <span class="image fit"><img src="https://www.seacom.it/wp-content/uploads/2020/09/Elastic-7.9.0.png" alt="" /></span>
+          <h3>Conclusion</h3>
+          <p>The activity achieved its goal to install and configure enterprise log monitoring tools. It introduces the new enterprise log monitoring tools called the elastic stack or ELK stack. The ELK stack is abbreviated from Elasticsearch, Logstash and KIbana. Connecting the softwares is called the elastic stack. The Logstash is used to obtain and filter the data from the servers then store them to the Elasticsearch. Therefore, Elasticsearch is the database where this data can be displayed through Kibana. On the other hand the Kibana is used to visualize the data from the server like a spreadsheet with graphs.</p>
+        </div>
+      </section>  
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>Juan Piolo Torrecampo</li>
+          <li>Project in Managing Enterprise Servers</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
