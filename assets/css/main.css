@@ -3429,6 +3429,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
+        display: none;
 				padding: 1em 2em;
 			}
 
@@ -3437,7 +3438,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#header {
-				display: block;
+				display: none;
 				padding: 0 2em;
 				text-align: left;
 			}
